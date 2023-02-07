@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --color-primary-cyan: hsl(158, 36%, 37%);
+  --color-primary-cyan-active: hsl(158, 36%, 15%);
+  --color-primary-cream: hsl(30, 38%, 92%);
+  --color-neutral-dark-blue: hsl(212, 21%, 14%);
+  --color-neutral-grayish-blue: hsl(228, 12%, 48%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+  --border-radius-outer: 10px;
+  --border-radius-inner: 8px;
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--color-primary-cream);
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  color: var(--color-neutral-grayish-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.flex-container {
+  background-color: var(--color-neutral-white);
+  border-radius: var(--border-radius-outer);
+  width: calc(var(--mobile-width) - 2em);
+}
+
+picture {
+  display: flex;
+}
+
+picture > img {
+  width: 100%;
+  border-top-left-radius: var(--border-radius-outer);
+  border-top-right-radius: var(--border-radius-outer);
+}
+
+.flex-row.text {
+  padding: 1.9em;
+}
+
+article > .category-header {
+  font-size: 0.8rem;
+  letter-spacing: 0.5em;
+  margin: 0 0 -0.5em 0;
+}
+
+article > .description {
+  margin: 0;
+  line-height: 1.7em;
+  margin-bottom: var(--border-radius-outer);
+}
+
+article > .price-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.price-container > .price-disabled {
+  text-decoration: line-through;
+}
+
+.title {
+  font-size: 2rem;
+  font-family: var(--font-fraunces);
+  color: var(--color-neutral-dark-blue);
+  margin: 1rem 0;
+}
+
+.title.title-cyan {
+  color: var(--color-primary-cyan);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px;
+  font-weight: 700;
+  border-radius: var(--border-radius-inner);
+  border: none;
+}
+
+.btn.btn-cyan {
+  background-color: var(--color-primary-cyan);
+  color: var(--color-neutral-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .flex-container {
+    display: flex;
+    width: calc(var(--desktop-width) / 2.6);
+  }
+
+  .flex-row {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  .flex-row.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  picture > img {
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius-outer);
+  }
+}

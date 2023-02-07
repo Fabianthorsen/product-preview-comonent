@@ -80,6 +80,7 @@ article > .price-container {
   font-family: var(--font-fraunces);
   color: var(--color-neutral-dark-blue);
   margin: 1rem 0;
+  line-height: 1.3em;
 }
 
 .title.title-cyan {

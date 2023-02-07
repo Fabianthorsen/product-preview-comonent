@@ -103,7 +103,7 @@ article > .price-container {
   color: var(--color-neutral-white);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1439.9px) {
   .flex-container {
     display: flex;
     width: calc(var(--desktop-width) / 2.6);

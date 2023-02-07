@@ -103,6 +103,10 @@ article > .price-container {
   color: var(--color-neutral-white);
 }
 
+.btn.btn.btn-cyan:active {
+  background-color: var(--color-primary-cyan-active);
+}
+
 @media screen and (min-width: 1439.9px) {
   .flex-container {
     display: flex;
